@@ -12,17 +12,38 @@
 
 #include "libft.h"
 
+static size_t	word_count(const char *s, char c)
+{
+	size_t	i;
+	size_t	count;
+
+	i = 0;
+	count = 0;
+	if (s == 0)
+		return (0);
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		count++;
+		while (s[i] && s[i] != c)
+			i++;
+		while (s[i] && s[i] == c)
+			i++;
+	}
+	return (count);
+}
+
 static char	*ft_strndup(const char *s, size_t n)
 {
 	size_t	i;
 	char	*str;
 
 	i = 0;
-	str = NULL;
 	if (n == 0)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (n + 1));
-	if (str == 0)
+	if (!str)
 		return (NULL);
 	while (i < n)
 	{
@@ -33,60 +54,45 @@ static char	*ft_strndup(const char *s, size_t n)
 	return (str);
 }
 
-static char	**ft_freeall(char **list)
+static char	**free_alloc(char **str)
 {
-	size_t	j;
-
-	j = 0;
-	while (list[j])
-	{
-		free(list[j]);
-		j++;
-	}
-	free(list);
-	return (NULL);
-}
-
-static size_t	ft_wordcount(char const *s, char c)
-{
-	size_t	listsize;
 	size_t	i;
 
 	i = 0;
-	listsize = 0;
-	while (s[i] != '\0')
+	while (str[i])
 	{
-		if ((i == 0 && s[i] != c) ||
-			(s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
-			listsize++;
+		free(str[i]);
 		i++;
 	}
-	return (listsize);
+	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strlist;
+	char	**str;
 	size_t	i;
-	size_t	k;
+	size_t	j;
 	size_t	save;
 
 	i = 0;
-	k = 0;
-	strlist = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
-	if (!strlist)
+	j = 0;
+	if (!s)
 		return (NULL);
-	while (i < ft_wordcount(s, c) && s[k] != '\0')
+	str = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
+	if (!str)
+		return (NULL);
+	while (i < word_count(s, c) && s[j])
 	{
-		while (s[k] == c)
-			k++;
-		save = k;
-		while (s[k] != c && s[k] != '\0')
-			k++;
-		strlist[i] = ft_strndup(&s[save], k - save);
-		if (strlist[i++] == 0)
-			return (ft_freeall(strlist));
+		while (s[j] == c)
+			j++;
+		save = j;
+		while (s[j] != c && s[j])
+			j++;
+		str[i] = ft_strndup(&s[save], j - save);
+		if (str[i++] == 0)
+			return (free_alloc(str));
 	}
-	strlist[i] = NULL;
-	return (strlist);
+	str[i] = NULL;
+	return (str);
 }
