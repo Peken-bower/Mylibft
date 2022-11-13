@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:51:37 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 08:56:58 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 11:01:28 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memchr(void *str, int c, size_t n);
@@ -39,5 +40,17 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+int		ft_isprint(int c);
+int		ft_isascii(int c);
+int		ft_isalpha(int c);
+int		ft_isalnum(int c);
+void	*ft_calloc(size_t count, size_t size);
+void	ft_bzero(void *s, size_t n);
 
 #endif

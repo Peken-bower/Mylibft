@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ataouaf <ataouaf@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 05:56:27 by ataouaf           #+#    #+#             */
-/*   Updated: 2022/11/11 16:15:52 by ataouaf          ###   ########.fr       */
+/*   Created: 2022/11/13 10:46:55 by aelmrabe          #+#    #+#             */
+/*   Updated: 2022/11/13 10:47:02 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,4 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-}
-#include <fcntl.h>
-int main()
-{
-	int fd = open("test.c",O_WRONLY | O_CREAT);
-	ft_putstr_fd("test fd",fd);
-	printf("file descriptor is = %d\n",fd);
-	close(fd);
 }
