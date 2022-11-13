@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 02:23:24 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 02:23:28 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 03:55:23 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *str, int c, size_t n)
 {
-	size_t index;
-	unsigned char *ptr;
+	size_t	index;
+	unsigned char	*ptr;
 
 	index = 0;
 	ptr = (unsigned char *)str;
