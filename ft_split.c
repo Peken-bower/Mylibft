@@ -66,10 +66,10 @@ static size_t	ft_wordcount(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **strlist;
-	size_t i;
-	size_t k;
-	size_t save;
+	char	**strlist;
+	size_t	i;
+	size_t	k;
+	size_t	save;
 
 	i = 0;
 	k = 0;
