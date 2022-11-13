@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 02:25:23 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 02:25:24 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 03:53:27 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	StringStart;
-	size_t	StringEnd;
-	char	*NewString;
+	size_t	stringstart;
+	size_t	stringend;
+	char	*newstring;
 
 	if (!s1)
 		return (NULL);
-	StringStart = 0;
-	StringEnd = ft_strlen(s1);
-	while (s1[StringStart] && ft_strchr(set, s1[StringStart]))
-		StringStart++;
-	while (s1[StringEnd - 1] && ft_strchr(set, s1[StringEnd - 1])
-		&& StringEnd > StringStart)
-		StringEnd--;
-	NewString = malloc(sizeof(char) * (StringEnd - StringStart + 1));
-	if (NewString)
-		ft_strlcpy(NewString, &s1[StringStart], StringEnd - StringStart + 1);
-	return (NewString);
+	stringstart = 0;
+	stringend = ft_strlen(s1);
+	while (s1[stringstart] && ft_strchr(set, s1[stringstart]))
+		stringstart++;
+	while (s1[stringend - 1] && ft_strchr(set, s1[stringend - 1])
+		&& stringend > stringstart)
+		stringend--;
+	newstring = malloc(sizeof(char) * (stringend - stringstart + 1));
+	if (newstring)
+		ft_strlcpy(newstring, &s1[stringstart], stringend - stringstart + 1);
+	return (newstring);
 }
