@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 02:23:04 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 02:23:05 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 09:53:28 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 static int	ft_isspace(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\t' ||
-		c == '\v' || c == '\f' || c == '\r')
+	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
 	else
 		return (0);

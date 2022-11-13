@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 03:51:37 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 03:51:38 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:56:58 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memchr(void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
