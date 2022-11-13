@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 02:25:23 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 03:53:27 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:37:05 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	stringend = ft_strlen(s1);
 	while (s1[stringstart] && ft_strchr(set, s1[stringstart]))
 		stringstart++;
+	if (stringstart == stringend)
+		return (ft_strdup(""));
 	while (s1[stringend - 1] && ft_strchr(set, s1[stringend - 1])
 		&& stringend > stringstart)
 		stringend--;
