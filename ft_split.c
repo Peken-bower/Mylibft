@@ -6,7 +6,7 @@
 /*   By: aelmrabe <aelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 02:23:33 by aelmrabe          #+#    #+#             */
-/*   Updated: 2022/11/13 02:23:34 by aelmrabe         ###   ########.fr       */
+/*   Updated: 2022/11/14 00:32:57 by aelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,24 @@ static size_t	word_count(const char *s, char c)
 	return (count);
 }
 
-static char	*ft_strndup(const char *s, size_t n)
+static char	*ft_strndup(const char *src, size_t n)
 {
 	size_t	i;
-	char	*str;
+	char	*dst;
 
 	i = 0;
 	if (n == 0)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * (n + 1));
-	if (!str)
+	dst = (char *)malloc(sizeof(char) * (n + 1));
+	if (!dst)
 		return (NULL);
 	while (i < n)
 	{
-		str[i] = s[i];
+		dst[i] = src[i];
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	dst[i] = '\0';
+	return (dst);
 }
 
 static char	**free_alloc(char **str)
