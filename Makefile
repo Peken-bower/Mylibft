@@ -29,6 +29,8 @@ RM = rm -f
 %.o: %.c libft.h
 	${CC} ${FLAGS} $< -o $@
 
+# The $< = %.c the first dependencie and %@ the name rule %.o
+
 ${NAME}:${OBJS}
 	ar -rc $@ ${OBJS}
 
