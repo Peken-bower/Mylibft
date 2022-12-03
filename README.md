@@ -7,11 +7,10 @@
 </p>
 
 <p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Peken-bower/libft?color=lightblue" />
-	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/Peken-bower/libft?color=critical" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Peken-bower/libft?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Peken-bower/libft?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Peken-bower/libft?color=green" />
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Peken-bower/Mylibft?color=lightblue" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Peken-bower/Mylibft?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Peken-bower/Mylibft?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Peken-bower/Mylibft?color=green" />
 </p>
 
 <h3 align="center">
